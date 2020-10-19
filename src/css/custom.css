@@ -26,6 +26,14 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-.navbar {
-  background:  0% 0% / cover rgba(65, 65, 65, 0.12);
+.landing .navbar {
+  background: 0 0 / cover rgba(65, 65, 65, 0.12);
+}
+
+.landing .navbar a {
+  color: white;
+}
+
+.landing .react-toggle {
+  display: none;
 }
