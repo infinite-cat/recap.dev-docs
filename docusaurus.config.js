@@ -1,12 +1,12 @@
 module.exports = {
-  title: 'My Site',
+  title: 'Recap.dev',
   tagline: 'The tagline of my site',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.png',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Infinite Cat', // Usually your GitHub org/user name.
+  projectName: 'recap.dev', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'Recap.dev',
@@ -28,6 +28,7 @@ module.exports = {
           position: 'right',
         },
       ],
+      hideOnScroll: true,
     },
     footer: {
       style: 'dark',
@@ -79,6 +80,9 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
   },
+  stylesheets: [
+    'https://fonts.googleapis.com/css?family=Quicksand:100,100i,300,300i,400,400i,500,500i,700,700i',
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',
