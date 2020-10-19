@@ -30,14 +30,38 @@
   background: 0 0 / cover rgba(65, 65, 65, 0.12);
 }
 
-.landing .navbar__logo {
-  filter: brightness(0) invert(1);
+.landing .navbar__title {
+  color: white;
 }
 
-.landing .navbar a {
+.landing .navbar__item {
   color: white;
 }
 
 .landing .react-toggle {
   display: none;
+}
+
+.landing .footer {
+  display: none;
+}
+
+.navbar-sidebar {
+  color: inherit;
+}
+
+.landing .navbar__inner {
+  filter: brightness(0) invert(1) !important;
+}
+
+[data-theme="light"] .navbar__logo {
+  filter: brightness(0) invert(0);
+}
+
+[data-theme="dark"] .navbar__logo {
+  filter: brightness(0) invert(1);
+}
+
+.navbar-sidebar .navbar__title {
+  color: inherit;
 }
