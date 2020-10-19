@@ -30,6 +30,10 @@
   background: 0 0 / cover rgba(65, 65, 65, 0.12);
 }
 
+.landing .navbar__logo {
+  filter: brightness(0) invert(1);
+}
+
 .landing .navbar a {
   color: white;
 }
