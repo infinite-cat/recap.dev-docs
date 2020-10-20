@@ -1,17 +1,20 @@
 module.exports = {
-  title: 'Recap.dev',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'recap.dev',
+  tagline: 'Open-source tracing for modern JavaScript backends',
+  url: 'https://recap.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.png',
   organizationName: 'Infinite Cat', // Usually your GitHub org/user name.
   projectName: 'recap.dev', // Usually your repo name.
   themeConfig: {
+    googleAnalytics: {
+      trackingID: 'UA-180958941-1',
+    },
     navbar: {
-      title: 'Recap.dev',
+      title: 'recap.dev',
       logo: {
-        alt: 'Recap.dev',
+        alt: 'recap.dev',
         src: 'img/logo.svg',
       },
       items: [
@@ -23,7 +26,7 @@ module.exports = {
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/infinite-cat/recap.dev-backend',
+          href: 'https://github.com/infinite-cat/',
           label: 'GitHub',
           position: 'right',
         },
@@ -50,12 +53,12 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Discord',
+              href: 'https://discord.gg/qSZZ9HN',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Slack',
+              href: 'https://join.slack.com/t/recapdev/shared_invite/zt-i5tq580i-TVvjpHsu35qVVSfbUL1V3Q',
             },
             {
               label: 'Twitter',
@@ -72,12 +75,12 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/infinite-cat',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} recap.dev`,
     },
   },
   stylesheets: [

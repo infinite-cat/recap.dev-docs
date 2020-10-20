@@ -65,20 +65,8 @@ export const CallToActionButton = styled(Fab)`
 
 export const NoUnderlineLink = styled.a`
   text-decoration: none;
-`
-
-export const EmbedContainer = styled.div`
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  &:hover {
+    text-decoration: none;
   }
 `
 
@@ -178,16 +166,6 @@ export const FeatureIconOnBlue = styled(FeatureIcon)`
   box-shadow: 0 2px 0 rgba(255, 255, 255, 0.15), 0 0 100px rgba(255, 255, 255, 0.2);
 `
 
-export const DownloadMicroserviceIcon = styled(FeatureIcon)`
-  margin: 0 10px;
-  padding: 0 62px;
-`
-
-export const ShareMicroservicesIcon = styled(FeatureIcon)`
-  margin: 0 10px;
-  padding: 0 62px;
-`
-
 export const CommunityHeader = styled.div`
   font-weight: 500;
   font-size: 36px;
@@ -204,7 +182,4 @@ export const Email = styled.div`
   font-weight: 500;
   font-size: 18px;
   margin-bottom: 150px;
-  @media (max-width: 950px) {
-    margin-bottom: 50px;
-  }
 `

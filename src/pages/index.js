@@ -55,7 +55,7 @@ function Home() {
               <ActionsRow>
                 <CallToActionButton variant="extended">Quick Start</CallToActionButton>
                 <NoUnderlineLink
-                  href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAQGzX05UQkZQS08zMUkxWkE1MFRYSjhSWUdNQVFQUS4u"
+                  href="https://forms.zoho.eu/arseny/form/recapdevdemorequest"
                   target="_blank"
                 >
                   <CallToActionButton variant="extended">Request A Demo</CallToActionButton>
@@ -121,6 +121,10 @@ function Home() {
               <SocialButton
                 icon="/slack.svg"
                 url="https://join.slack.com/t/recapdev/shared_invite/zt-i5tq580i-TVvjpHsu35qVVSfbUL1V3Q"
+              />
+              <SocialButton
+                icon="/discord.svg"
+                url="https://discord.gg/qSZZ9HN"
               />
               <SocialButton icon="/twitter.svg" url="https://twitter.com/BlocksDirectory" />
               <SocialButton icon="/github.svg" url="https://github.com/infinite-cat" />

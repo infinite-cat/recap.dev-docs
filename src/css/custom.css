@@ -6,6 +6,10 @@
  */
 
 /* You can override the default Infima variables here. */
+* {
+  font-family: Quicksand, "Segoe UI", sans-serif;
+}
+
 :root {
   --ifm-color-primary: #64b5f6;
   --ifm-color-primary-dark: #43a5f4;
