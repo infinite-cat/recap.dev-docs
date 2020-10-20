@@ -36,12 +36,12 @@ function Home() {
   const state = useLocation()
 
   if (state.pathname !== '/') {
-    return <Layout description="Description will go into a meta tag in <head />" />
+    return <Layout description="Open-source tracing for modern JavaScript backends" />
   }
 
   return (
     <div className="landing">
-      <Layout description="Description will go into a meta tag in <head />">
+      <Layout description="Open-source tracing for modern JavaScript backends">
         <Providers>
           <TitleBlock>
             <TitleBlockContent>
