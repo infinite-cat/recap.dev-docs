@@ -1,7 +1,5 @@
 import React from 'react'
 import Layout from '@theme/Layout'
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import { useLocation } from 'react-use'
 
 import {
   ActionsRow,
@@ -32,13 +30,6 @@ import {
 import { Providers } from '../components/providers'
 
 function Home() {
-  const context = useDocusaurusContext()
-  const state = useLocation()
-
-  if (state.pathname !== '/') {
-    return <Layout description="Open-source tracing for modern JavaScript backends" />
-  }
-
   return (
     <div className="landing">
       <Layout description="Open-source tracing for modern JavaScript backends">
