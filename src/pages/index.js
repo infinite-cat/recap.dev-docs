@@ -44,7 +44,12 @@ function Home() {
               </ProjectDescription>
 
               <ActionsRow>
-                <CallToActionButton variant="extended">Quick Start</CallToActionButton>
+                <NoUnderlineLink
+                  href="/docs"
+                  target="_blank"
+                >
+                  <CallToActionButton variant="extended">Quick Start</CallToActionButton>
+                </NoUnderlineLink>
                 <NoUnderlineLink
                   href="https://forms.zoho.eu/arseny/form/recapdevdemorequest"
                   target="_blank"
