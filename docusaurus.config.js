@@ -8,6 +8,7 @@ module.exports = {
   organizationName: 'Infinite Cat', // Usually your GitHub org/user name.
   projectName: 'recap.dev', // Usually your repo name.
   themeConfig: {
+    image: 'img/logo.png',
     googleAnalytics: {
       trackingID: 'UA-180958941-1',
     },

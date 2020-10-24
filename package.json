@@ -28,7 +28,6 @@
     "@docusaurus/module-type-aliases": "^2.0.0-alpha.51",
     "@tsconfig/docusaurus": "^1.0.2",
     "@types/react": "^16.9.53",
-    "@types/react-helmet": "^6.1.0",
     "@types/react-router-dom": "^5.1.6",
     "babel-plugin-emotion": "^10.0.33",
     "babel-plugin-styled-components": "^1.11.1",
