@@ -29,4 +29,19 @@ This command will download recommended `docker-compose.yml` to your current dire
 docker-compose up -d
 ```
 
-This command will start a recap.dev server in a detached mode.
+This command will start a recap.dev server in a detached mode. 
+
+Default UI port is **8081** and default tracing port is **8080**.
+
+## Using AWS AMI
+
+1. Go to AWS console
+
+2. Go to EC2
+
+3. Click launch and search community AMIs for the latest recap.dev AMI
+
+4. Default UI port is **8081** and default tracing port is **8080**. Make them available through a security group settings to your team and your applications.
+
+
+Next step is tracing your application
