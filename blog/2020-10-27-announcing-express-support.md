@@ -12,7 +12,7 @@ We're happy to announce that starting from version 1.7.0 of [recap.dev JavaScrip
 
 With the power of async hooks recap.dev traces individual requests and captures its response, request, and an error if there's any. 
 Just like our recap.dev for Serverless Framework it will also capture and build a timeline of database queries, HTTP requests, and various SDK calls.
-You can also capture logs and enable a function-level tracing to see a timeline of individual lambda calls.
+You can also capture logs and enable a function-level tracing to see a timeline of individual function calls.
 
 ![A recap.dev trace of an example Express application](/img/blog/2020-10-27-announcing-express-support/express-trace.png "A recap.dev trace of an example Express application")
 
