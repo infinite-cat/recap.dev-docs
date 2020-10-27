@@ -5,6 +5,7 @@ author: Arseny Yankovski
 author_title: Lead Architect @ eMarketeer
 author_url: https://github.com/ArsenyYankovsky
 author_image_url: https://avatars0.githubusercontent.com/u/1508345?s=460&u=3f36532a8ad64bd1d110c00a4eb438600d60cb92&v=4
+image: /img/blog/2020-10-27-announcing-express-support/hero.png
 tags: [recap.dev, express, integration, support]
 ---
 
