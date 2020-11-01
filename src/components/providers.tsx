@@ -1,8 +1,7 @@
 import React from 'react'
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 import { ThemeProvider as MuiProvider } from '@material-ui/styles'
-import { CssBaseline, StylesProvider } from '@material-ui/core'
-import { ThemeProvider as StyledProvider } from 'styled-components'
+import { StylesProvider } from '@material-ui/core'
 
 import { InitialLoadProvider } from '../contexts/initial-load.context'
 import { UseImageProvider } from '../contexts/use-image.context'
@@ -60,7 +59,7 @@ export const Providers = ({ children }: any) => (
     <StylesProvider injectFirst>
       <InitialLoadProvider>
         <UseImageProvider>
-          <StyledProvider theme={theme}>{children}</StyledProvider>
+          {children}
         </UseImageProvider>
       </InitialLoadProvider>
     </StylesProvider>
