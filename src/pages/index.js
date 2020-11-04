@@ -122,7 +122,7 @@ function Home() {
                 icon="/discord.svg"
                 url="https://discord.gg/qSZZ9HN"
               />
-              <SocialButton icon="/twitter.svg" url="https://twitter.com/BlocksDirectory" />
+              <SocialButton icon="/twitter.svg" url="https://twitter.com/recap_dev" />
               <SocialButton icon="/github.svg" url="https://github.com/infinite-cat" />
             </SocialButtons>
             <Email>
