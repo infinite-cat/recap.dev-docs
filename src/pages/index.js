@@ -41,6 +41,9 @@ function Home() {
 
               <ProjectDescription variant="h4">
                 Open-source tracing for modern JavaScript backends
+                <ProjectDescription variant="h5">
+                  Supports Express.js and Serverless. Contact us for more!
+                </ProjectDescription>
               </ProjectDescription>
 
               <ActionsRow>
