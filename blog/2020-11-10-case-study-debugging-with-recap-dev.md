@@ -14,7 +14,10 @@ I personally use it in both personal and professional projects.
 Here's an example of how I used recap.dev to fix a bug in an experimental feature in one of my personal projects.
 
 It all started when I was routinely going through error notifications recap.dev sent to my Slack.
+
 ![A recap.dev error message saying the database table doesn't exists](/img/blog/2020-11-10-case-study-debugging-with-recap-dev/slack-error.png "A recap.dev error message saying the database table doesn't exists")
+
+<!--truncate-->
 
 The database table is missing, and it sounds like a blocker and a significant oversight. The error rate, however, was around 39%.
 How come it doesn't 100% error rate, though? It cannot really do any work if there is no table.
