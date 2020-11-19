@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '@theme/Layout'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 
 import {
   ActionsRow,
@@ -30,9 +31,11 @@ import {
 import { Providers } from '../components/providers'
 
 function Home() {
+  const { siteConfig } = useDocusaurusContext()
+
   return (
     <div className="landing">
-      <Layout description="Open-source tracing for modern JavaScript backends">
+      <Layout title={siteConfig.tagline} description="Open-source tracing for modern JavaScript backends">
         <Providers>
           <TitleBlock>
             <TitleBlockContent>
