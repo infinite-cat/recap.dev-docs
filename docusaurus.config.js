@@ -26,6 +26,7 @@ module.exports = {
           position: 'left',
         },
         { to: 'blog', label: 'Blog', position: 'left' },
+        { to: 'https://demo.recap.dev', label: 'Demo', position: 'left' },
         {
           href: 'https://github.com/infinite-cat/',
           label: 'GitHub',

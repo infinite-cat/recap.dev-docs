@@ -54,10 +54,10 @@ function Home() {
                   <CallToActionButton variant="extended">Quick Start</CallToActionButton>
                 </NoUnderlineLink>
                 <NoUnderlineLink
-                  href="https://forms.zohopublic.eu/arseny/form/recapdevdemorequest/formperma/Co1_MaB0S24PohK5eO4s2GefAAYDQxWScxHtpxfz27g"
+                  href="https://demo.recap.dev"
                   target="_blank"
                 >
-                  <CallToActionButton variant="extended">Request A Demo</CallToActionButton>
+                  <CallToActionButton variant="extended">View Demo</CallToActionButton>
                 </NoUnderlineLink>
               </ActionsRow>
             </TitleBlockContent>

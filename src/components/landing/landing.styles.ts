@@ -56,11 +56,14 @@ export const CallToActionButton = styled(Fab)`
   font-weight: bold;
   font-size: 24px;
   box-shadow: 0 4px 12px rgba(23, 20, 43, 0.2);
-  background: linear-gradient(94.33deg, #03c6fb -36.65%, #2ff6f5 99.37%);
+  background: #03c6fb;
   text-shadow: 0 2px 4px rgba(0, 26, 94, 0.38);
   letter-spacing: 2px;
   border-radius: 45px;
   height: 60px;
+  &:hover {
+    background: #4fd7fc;
+  }
 `
 
 export const NoUnderlineLink = styled.a`
