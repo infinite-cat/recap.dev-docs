@@ -5,7 +5,7 @@ author: Arseny Yankovski
 author_title: Lead Architect @ eMarketeer
 author_url: https://github.com/ArsenyYankovsky
 author_image_url: https://avatars0.githubusercontent.com/u/1508345?s=460&u=3f36532a8ad64bd1d110c00a4eb438600d60cb92&v=4
-image: /img/blog/2020-11-10-case-study-debugging-with-recap-dev/hero.png
+image: /img/blog/2020-12-13-arm-backed-servers-better-performance-for-less-money/hero.png
 tags: [recap.dev, ARM, x86, EC2, AWS, Graviton2]
 ---
 
@@ -28,7 +28,7 @@ It's a docker-compose template running 4 processes.
 A handler process puts every request into a RabbitMQ.
 A separate background process inserts traces in batches of 1000 into a PostgreSQL database.
 
-![A typical recap.dev setup consists of 4 processes](/img/blog/2020-12-15-arm-backed-servers-better-performance-for-less-money/load-test-schema.png "A typical recap.dev setup consists of 4 processes")
+![A typical recap.dev setup consists of 4 processes](/img/blog/2020-12-13-arm-backed-servers-better-performance-for-less-money/load-test-schema.png "A typical recap.dev setup consists of 4 processes")
 
 I ran wrk on a t3.2xlarge instance in the same region using the following command:
 
@@ -66,17 +66,17 @@ Transfer/sec:    230.37KB
 
 ARM-backed instance served 27% more requests per second 26% faster (on average).
 
-![ARM-backed instance served 27% more requests per second](/img/blog/2020-12-15-arm-backed-servers-better-performance-for-less-money/rps-graph.png "ARM-backed instance served 27% more requests per second")
+![ARM-backed instance served 27% more requests per second](/img/blog/2020-12-13-arm-backed-servers-better-performance-for-less-money/rps-graph.png "ARM-backed instance served 27% more requests per second")
 
 Then I ran a couple of benchmarks from the Phoronix Test Suite. 
 
 [pts/compress-7zip-1.7.1](https://openbenchmarking.org/test/pts/compress-7zip) gave 6833 MIPS on t4g.small (ARM) versus 5029 MIPS on t3.small (x86). A 35% higher result on an ARM processor.
 
-![ARM-backed instance got a 35% better result in pts/compress-7zip benchmark](/img/blog/2020-12-15-arm-backed-servers-better-performance-for-less-money/7zip-graph.png "ARM-backed instance got a 35% better result in pts/compress-7zip benchmark")
+![ARM-backed instance got a 35% better result in pts/compress-7zip benchmark](/img/blog/2020-12-13-arm-backed-servers-better-performance-for-less-money/7zip-graph.png "ARM-backed instance got a 35% better result in pts/compress-7zip benchmark")
 
 ARM-backed server finished the [pts/c-ray](https://openbenchmarking.org/test/pts/c-ray) benchmark more than 2 times faster on average. 958 seconds for x86 versus just 458 for ARM.
 
-![The ARM-backed instance was more than 2 times faster in pts/c-ray benchmark](/img/blog/2020-12-15-arm-backed-servers-better-performance-for-less-money/c-ray-graph.png "ARM-backed instance was almost 2 times faster in pts/c-ray benchmark")
+![The ARM-backed instance was more than 2 times faster in pts/c-ray benchmark](/img/blog/2020-12-13-arm-backed-servers-better-performance-for-less-money/c-ray-graph.png "ARM-backed instance was almost 2 times faster in pts/c-ray benchmark")
 
 I also ran a bunch of RAM speed tests from [pts/ramspeed](https://openbenchmarking.org/test/pts/ramspeed-1.4.3) that measure memory throughput on different operations.
 
@@ -93,7 +93,7 @@ I also ran a bunch of RAM speed tests from [pts/ramspeed](https://openbenchmarki
 | Triad/Floating Point   | 49667 MB/s      | 12809 MB/s     |
 | Average/Floating Point | 54716 MB/s      | 12260 MB/s     |
 
-![RAM on the Graviton2 instance was 3 to 5 times faster than on its x86 counterpart](/img/blog/2020-12-15-arm-backed-servers-better-performance-for-less-money/ramspeed-graph.png "RAM on the Graviton2 instance was 3 to 5 times faster than on its x86 counterpart")
+![RAM on the Graviton2 instance was 3 to 5 times faster than on its x86 counterpart](/img/blog/2020-12-13-arm-backed-servers-better-performance-for-less-money/ramspeed-graph.png "RAM on the Graviton2 instance was 3 to 5 times faster than on its x86 counterpart")
 
 In short, the memory on the t4g.small equipped with a Graviton2 processor was 3 to 5 times faster.
 
