@@ -1,6 +1,6 @@
 ---
-slug: arm-vs-x86-on-servers-benchmarked
-title: EC2 ARM-backed instances are 30% faster and 10% cheaper - benchmarked.
+slug: arm-backed-servers-better-performance-for-less-money
+title: ARM-backed Servers - Better Performance for Less Money
 author: Arseny Yankovski
 author_title: Lead Architect @ eMarketeer
 author_url: https://github.com/ArsenyYankovsky
@@ -12,22 +12,23 @@ tags: [recap.dev, ARM, x86, EC2, AWS, Graviton2]
 This year Apple changed the game of the desktop CPUs with their announcement of the Apple Silicon. 
 A similar thing happened a year ago in the world of cloud computing. 
 AWS released a new type of instance backed by their custom-built ARM processors called AWS Graviton2.
-They're supposed to have up to 40% better price-performance than their x86 counterparts. Another huge update is Graviton-based Amazon RDS instances.
+They're supposed to have up to 40% better price-performance than their x86 counterparts. 
+Another huge recent update is the introduction of Graviton2-based Amazon RDS instances.
 Let's run a couple of benchmarks and load-test a real-world backend application to see how good ARM servers are and how easy they are to use.
 
-# Performance
+## Performance
 
 I compared a t4g.small (ARM) instance to a t3.small (x86) EC2 instance. 
-Currently, the on-demand hourly cost in the eu-east-1 region for t3.small (x86) is $0.0208 and t4g.small (ARM) is $0.0168.
+Currently, the on-demand hourly cost in the us-east-1 region for t3.small (x86) is $0.0208 and t4g.small (ARM) is $0.0168.
 The ARM-backed instance is already around 20% cheaper.
 
 First, I ran a load-test on a fresh recap.dev setup with wrk.
 
 It's a docker-compose template running 4 processes.
 A handler process puts every request into a RabbitMQ.
-A separate process inserts traces in batches of 1000 into a PostgreSQL database.
+A separate background process inserts traces in batches of 1000 into a PostgreSQL database.
 
-{/* Add schema image */}
+![A typical recap.dev setup consists of 4 processes](/img/blog/2020-12-15-arm-backed-servers-better-performance-for-less-money/load-test-schema.png "A typical recap.dev setup consists of 4 processes")
 
 I ran wrk on a t3.2xlarge instance in the same region using the following command:
 
@@ -65,20 +66,19 @@ Transfer/sec:    230.37KB
 
 ARM-backed instance served 27% more requests per second 26% faster (on average).
 
-![A recap.dev error message saying the database table doesn't exists](/img/blog/2020-12-08-arm-vs-x86-on-servers/rps_graph.png "A recap.dev error message saying the database table doesn't exists")
-
-{/* Add a graph here comparing rps and latency? */}
+![ARM-backed instance served 27% more requests per second](/img/blog/2020-12-15-arm-backed-servers-better-performance-for-less-money/rps-graph.png "ARM-backed instance served 27% more requests per second")
 
 Then I ran a couple of benchmarks from the Phoronix Test Suite. 
+
 [pts/compress-7zip-1.7.1](https://openbenchmarking.org/test/pts/compress-7zip) gave 6833 MIPS on t4g.small (ARM) versus 5029 MIPS on t3.small (x86). A 35% higher result on an ARM processor.
 
-{/* MIPS graph */}
+![ARM-backed instance got a 35% better result in pts/compress-7zip benchmark](/img/blog/2020-12-15-arm-backed-servers-better-performance-for-less-money/7zip-graph.png "ARM-backed instance got a 35% better result in pts/compress-7zip benchmark")
 
-ARM-backed server finished [pts/c-ray](https://openbenchmarking.org/test/pts/c-ray) almost 2 times faster on average. 958 seconds for x84 versus just 458 for ARM.
+ARM-backed server finished the [pts/c-ray](https://openbenchmarking.org/test/pts/c-ray) benchmark more than 2 times faster on average. 958 seconds for x86 versus just 458 for ARM.
 
-{/* c-ray graph */}
+![The ARM-backed instance was more than 2 times faster in pts/c-ray benchmark](/img/blog/2020-12-15-arm-backed-servers-better-performance-for-less-money/c-ray-graph.png "ARM-backed instance was almost 2 times faster in pts/c-ray benchmark")
 
-I also ran a bunch of RAM speed tests from [pts/ramspeed](pts/ramspeed) that measure RAM throughput on different operations.
+I also ran a bunch of RAM speed tests from [pts/ramspeed](https://openbenchmarking.org/test/pts/ramspeed-1.4.3) that measure memory throughput on different operations.
 
 | Benchmark Type         | t4g.small (ARM) | t3.small (x86) |
 |------------------------|-----------------|----------------|
@@ -93,13 +93,13 @@ I also ran a bunch of RAM speed tests from [pts/ramspeed](pts/ramspeed) that mea
 | Triad/Floating Point   | 49667 MB/s      | 12809 MB/s     |
 | Average/Floating Point | 54716 MB/s      | 12260 MB/s     |
 
-{/* ramspeed graph */}
+![RAM on the Graviton2 instance was 3 to 5 times faster than on its x86 counterpart](/img/blog/2020-12-15-arm-backed-servers-better-performance-for-less-money/ramspeed-graph.png "RAM on the Graviton2 instance was 3 to 5 times faster than on its x86 counterpart")
 
 In short, the memory on the t4g.small equipped with a Graviton2 processor was 3 to 5 times faster.
 
 Just looking at the performance and the instance price the conclusion is that the switch to the ARM-based instances is a no-brainer. You get more power for less money.
 
-# Compatibility
+## Compatibility
 
 The big question when switching processor architectures is compatibility.
 
@@ -107,8 +107,10 @@ I found that a lot of things were already recompiled for the ARM processors.
 Mainly, Docker was available as .rpm and .deb and so were most of the images (yes, they need to be built for different architectures).
 Docker-compose, however, wasn't. Which was a huge bummer for me. 
 I had to jump through some hoops building several dependencies from source code to make it work. 
-The situation will hopefully improve in the future as the ARM adoption on the servers grows more, 
+The situation will hopefully improve in the future as the ARM adoption on the servers grows, 
 but right now you might pay more in working hours than you save by migrating.
 
 The RDS (AWS managed RDBMS service) on Graviton2 is where I think the real win-win is. 
 You don't have to do any setup and get all the benefits of an ARM processor on your server.
+
+We also made sure [recap.dev](https://recap.dev/) is easy to run on ARM processors and introduced multi-arch docker images and made pre-built ARM AMIs available on AWS.
