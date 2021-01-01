@@ -68,10 +68,10 @@ function Home() {
                 We will <strong>help you set it up</strong> for free. Fill in the form{' '}
                 <span>
                   <a
-                  href="https://zfrmz.eu/yoAXuQzFXuTPwxs3Xy1O"
-                  target="_blank"
-                  rel="nofollow noopener"
-                >
+                    href="https://zfrmz.eu/yoAXuQzFXuTPwxs3Xy1O"
+                    target="_blank"
+                    rel="nofollow noopener"
+                  >
                     here
                   </a>{' '}
                 </span>
