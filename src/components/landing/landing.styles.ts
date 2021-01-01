@@ -36,8 +36,25 @@ export const ProjectName = styled(Typography)`
 
 export const ProjectDescription = styled(Typography)`
   color: white;
+  margin-bottom: 0;
+  text-align: center;
+`
+
+export const SupportedTechnologies = styled(Typography)`
+  color: white;
+  margin-top: 20px;
+  text-align: center;
+`
+
+export const PaddedHeading = styled(Typography)`
+  color: white;
   margin-bottom: 80px;
   text-align: center;
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
 `
 
 export const ActionsRow = styled.div`
@@ -46,7 +63,7 @@ export const ActionsRow = styled.div`
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 `
 
 export const CallToActionButton = styled(Fab)`

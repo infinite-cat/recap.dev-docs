@@ -8,7 +8,7 @@ interface InitialLoad {
   children: JSX.Element
 }
 
-const InitialLoadContext = React.createContext({ } as InitialLoadState)
+const InitialLoadContext = React.createContext({} as InitialLoadState)
 
 const InitialLoadProvider = memo(({ children }: InitialLoad) => {
   const [initialLoadComplete, setInitialLoadComplete] = useState(false)

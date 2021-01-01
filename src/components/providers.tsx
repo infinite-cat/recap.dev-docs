@@ -58,9 +58,7 @@ export const Providers = ({ children }: any) => (
   <MuiProvider theme={theme}>
     <StylesProvider injectFirst>
       <InitialLoadProvider>
-        <UseImageProvider>
-          {children}
-        </UseImageProvider>
+        <UseImageProvider>{children}</UseImageProvider>
       </InitialLoadProvider>
     </StylesProvider>
   </MuiProvider>

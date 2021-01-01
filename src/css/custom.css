@@ -7,7 +7,7 @@
 
 /* You can override the default Infima variables here. */
 * {
-  font-family: Quicksand, "Segoe UI", sans-serif;
+  font-family: Quicksand, 'Segoe UI', sans-serif;
 }
 
 :root {
@@ -58,11 +58,11 @@
   filter: brightness(0) invert(1) !important;
 }
 
-[data-theme="light"] .navbar__logo {
+[data-theme='light'] .navbar__logo {
   filter: brightness(0) invert(0);
 }
 
-[data-theme="dark"] .navbar__logo {
+[data-theme='dark'] .navbar__logo {
   filter: brightness(0) invert(1);
 }
 

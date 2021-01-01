@@ -12,7 +12,7 @@ export const Button = styled.button<ButtonProps>`
   border: none;
   vertical-align: baseline;
   letter-spacing: 2px;
-  background: #0D8EFC;
+  background: #0d8efc;
   color: white;
   margin: 0;
   padding: 8px 25px;
@@ -28,7 +28,7 @@ export const Button = styled.button<ButtonProps>`
   transition: background-color 0.3s;
 
   &:hover {
-    background: #27A8FF;
+    background: #27a8ff;
     transition: background-color 300ms;
   }
 

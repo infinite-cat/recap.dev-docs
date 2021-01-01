@@ -3,7 +3,7 @@ import { Fab } from '@material-ui/core'
 import styled from '@emotion/styled'
 
 const StyledFab = styled(Fab)`
-  background: #FFFFFF;
+  background: #ffffff;
   width: 48px;
   height: 48px;
   margin: 0 10px;

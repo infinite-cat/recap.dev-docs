@@ -27,6 +27,8 @@ import {
   TitleBlock,
   TitleBlockContent,
   WhiteBackgroundFeature,
+  PaddedHeading,
+  SupportedTechnologies,
 } from '../components/landing'
 import { Providers } from '../components/providers'
 
@@ -35,7 +37,10 @@ function Home() {
 
   return (
     <div className="landing">
-      <Layout title={siteConfig.tagline} description="Open-source tracing for modern JavaScript backends">
+      <Layout
+        title={siteConfig.tagline}
+        description="Open-source tracing for modern JavaScript backends"
+      >
         <Providers>
           <TitleBlock>
             <TitleBlockContent>
@@ -44,25 +49,32 @@ function Home() {
 
               <ProjectDescription variant="h4">
                 Open-source tracing for modern JavaScript backends
-                <ProjectDescription variant="h5">
-                  Supports Express.js and Serverless. Contact us for more!
-                </ProjectDescription>
               </ProjectDescription>
 
+              <SupportedTechnologies variant="h6">
+                Supports Express.js and Serverless. Contact us for more!
+              </SupportedTechnologies>
+
               <ActionsRow>
-                <NoUnderlineLink
-                  href="/docs"
-                  target="_blank"
-                >
+                <NoUnderlineLink href="/docs" target="_blank">
                   <CallToActionButton variant="extended">Quick Start</CallToActionButton>
                 </NoUnderlineLink>
-                <NoUnderlineLink
-                  href="https://demo.recap.dev"
-                  target="_blank"
-                >
+                <NoUnderlineLink href="https://demo.recap.dev" target="_blank">
                   <CallToActionButton variant="extended">View Demo</CallToActionButton>
                 </NoUnderlineLink>
               </ActionsRow>
+
+              <PaddedHeading variant="h6">
+                We will <strong>help you set it up</strong> for free. Fill in the form{' '}
+                <a
+                  href="https://zfrmz.eu/yoAXuQzFXuTPwxs3Xy1O"
+                  target="_blank"
+                  rel="nofollow noopener"
+                >
+                  here
+                </a>{' '}
+                or email us at <a href="mailto:contact@recap.dev">contact@recap.dev</a>
+              </PaddedHeading>
             </TitleBlockContent>
           </TitleBlock>
           <FeaturesBlock>
@@ -124,10 +136,7 @@ function Home() {
                 icon="/slack.svg"
                 url="https://join.slack.com/t/recapdev/shared_invite/zt-i5tq580i-TVvjpHsu35qVVSfbUL1V3Q"
               />
-              <SocialButton
-                icon="/discord.svg"
-                url="https://discord.gg/qSZZ9HN"
-              />
+              <SocialButton icon="/discord.svg" url="https://discord.gg/qSZZ9HN" />
               <SocialButton icon="/twitter.svg" url="https://twitter.com/recap_dev" />
               <SocialButton icon="/github.svg" url="https://github.com/infinite-cat" />
             </SocialButtons>
