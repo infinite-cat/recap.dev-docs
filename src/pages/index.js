@@ -66,13 +66,15 @@ function Home() {
 
               <PaddedHeading variant="h6">
                 We will <strong>help you set it up</strong> for free. Fill in the form{' '}
-                <a
-                  href="https://forms.zohopublic.eu/arseny/form/recapdevsetuprequest/formperma/hXYTGlLevEXhaebB_YQpKk6yVy2pwRtK7rSa_8zocVY"
+                <span>
+                  <a
+                  href="https://zfrmz.eu/yoAXuQzFXuTPwxs3Xy1O"
                   target="_blank"
                   rel="nofollow noopener"
                 >
-                  here
-                </a>{' '}
+                    here
+                  </a>{' '}
+                </span>
                 or email us at <a href="mailto:contact@recap.dev">contact@recap.dev</a>
               </PaddedHeading>
             </TitleBlockContent>
