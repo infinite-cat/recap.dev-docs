@@ -67,7 +67,7 @@ function Home() {
               <PaddedHeading variant="h6">
                 We will <strong>help you set it up</strong> for free. Fill in the form{' '}
                 <a
-                  href="https://zfrmz.eu/yoAXuQzFXuTPwxs3Xy1O"
+                  href="https://forms.zohopublic.eu/arseny/form/recapdevsetuprequest/formperma/hXYTGlLevEXhaebB_YQpKk6yVy2pwRtK7rSa_8zocVY"
                   target="_blank"
                   rel="nofollow noopener"
                 >
