@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import Layout from '@theme/Layout'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 
@@ -35,6 +35,12 @@ import { Providers } from '../components/providers'
 function Home() {
   const { siteConfig } = useDocusaurusContext()
 
+  const onViewDemoClick = useCallback(() => {
+    if (window.ga) {
+      window.ga('send', 'event', 'outbound', 'click', 'demo')
+    }
+  }, [])
+
   return (
     <div className="landing">
       <Layout
@@ -59,7 +65,7 @@ function Home() {
                 <NoUnderlineLink href="/docs" target="_blank">
                   <CallToActionButton variant="extended">Quick Start</CallToActionButton>
                 </NoUnderlineLink>
-                <NoUnderlineLink href="https://demo.recap.dev" target="_blank">
+                <NoUnderlineLink href="https://demo.recap.dev" onClick={onViewDemoClick} target="_blank">
                   <CallToActionButton variant="extended">View Demo</CallToActionButton>
                 </NoUnderlineLink>
               </ActionsRow>
