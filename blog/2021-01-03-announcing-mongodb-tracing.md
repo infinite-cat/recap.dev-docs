@@ -1,6 +1,6 @@
 ---
 slug: announcing-mongodb-tracing
-title: Recap.dev now traces MongoDB
+title: Recap.Dev Now Traces MongoDB
 author: Arseny Yankovski
 author_title: Lead Architect @ eMarketeer
 author_url: https://github.com/ArsenyYankovsky
