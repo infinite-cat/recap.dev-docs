@@ -2,11 +2,7 @@ import React from 'react'
 import Layout from '@theme/Layout'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 
-import {
-  CommunityHeader,
-  SocialButton,
-  SocialButtons,
-} from '../components/landing'
+import { CommunityHeader, SocialButton, SocialButtons } from '../components/landing'
 import { ContactUsBlock, Email } from '../components/contact-us'
 import { Providers } from '../components/providers'
 
@@ -24,7 +20,8 @@ function ContactUs() {
             <CommunityHeader>Contact Us</CommunityHeader>
             <Email>
               For any questions and suggestions please contact us at{' '}
-              <a href="mailto:contact@recap.dev">contact@recap.dev</a> or a social platform of your choice.
+              <a href="mailto:contact@recap.dev">contact@recap.dev</a> or a social platform of your
+              choice.
             </Email>
             <SocialButtons>
               <SocialButton

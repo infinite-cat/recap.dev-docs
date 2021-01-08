@@ -65,7 +65,11 @@ function Home() {
                 <NoUnderlineLink href="/docs" target="_blank">
                   <CallToActionButton variant="extended">Quick Start</CallToActionButton>
                 </NoUnderlineLink>
-                <NoUnderlineLink href="https://demo.recap.dev" onClick={onViewDemoClick} target="_blank">
+                <NoUnderlineLink
+                  href="https://demo.recap.dev"
+                  onClick={onViewDemoClick}
+                  target="_blank"
+                >
                   <CallToActionButton variant="extended">View Demo</CallToActionButton>
                 </NoUnderlineLink>
               </ActionsRow>
