@@ -13,4 +13,4 @@ Here's a list of currently supported technologies:
 - [ExpressJS](/docs/tracing/express-application). That includes any technologies based on ExpressJS.
 - [NestJS](/docs/tracing/nestjs-application). NestJS is based on ExpressJS but recap.dev goes a step further and provides an even deeper integration for the NestJS-based applications.
 
-If your favorite technology is not supported feel free to [contact us](/contact-us) and we'll see what can be done.
+If your favorite technology is not supported please [contact us](/contact-us), and we'll see what we could do.
