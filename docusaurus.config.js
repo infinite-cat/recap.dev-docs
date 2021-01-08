@@ -28,6 +28,11 @@ module.exports = {
         { to: 'blog', label: 'Blog', position: 'left' },
         { to: 'https://demo.recap.dev', label: 'Demo', position: 'left' },
         {
+          to: 'contact-us',
+          label: 'Contact Us',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/infinite-cat/',
           label: 'GitHub',
           position: 'right',
@@ -72,6 +77,10 @@ module.exports = {
               to: 'blog',
             },
             {
+              label: 'Contact Us',
+              to: 'contact-us',
+            },
+            {
               label: 'GitHub',
               href: 'https://github.com/infinite-cat',
             },
@@ -90,11 +99,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/infinite-cat/recap.dev-docs/edit/master/website/',
+          editUrl: 'https://github.com/infinite-cat/recap.dev-website/edit/master/',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/infinite-cat/recap.dev-docs/edit/master/website/blog/',
+          editUrl: 'https://github.com/infinite-cat/recap.dev-website/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

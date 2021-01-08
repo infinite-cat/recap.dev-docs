@@ -8,7 +8,7 @@ slug: start-server
 recap.dev server is available as a [docker image](https://hub.docker.com/repository/docker/recapdev/server) so it's easy to start it wherever you host your applications. 
 It's also available as an AMI so it's easier to start using recap.dev on AWS.
 
-## Using a docker image
+## Using a Docker Image
 
 There are only two prerequisites to start a recap.dev docker image on your server:
 
@@ -19,13 +19,13 @@ We recommend starting with the latest [docker-compose.yml](https://github.com/in
 
 To start your recap.dev server just type in two following commands:
 
-```
+```bash
 curl -o docker-compose.yaml https://raw.githubusercontent.com/infinite-cat/recap.dev-server/master/docker-compose.yml
 ```
 This command will download recommended `docker-compose.yml` to your current directory
 
 
-```
+```bash
 docker-compose up -d
 ```
 
@@ -43,5 +43,4 @@ Default UI port is **8081** and default tracing port is **8080**.
 
 4. Default UI port is **8081** and default tracing port is **8080**. Make them available through a security group settings to your team and your applications.
 
-
-Next step is tracing your application
+Next step is [tracing your application](/docs/tracing)
