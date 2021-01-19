@@ -11,7 +11,7 @@ tags: [recap.dev, typescript, ts, tracing, monitoring, integration, support]
 
 We just released a new [recap.dev TypeScript transformer](https://www.npmjs.com/package/@recap.dev/ts-transformer) which will automatically wrap your functions and classes with the function-level tracing.
 
-This provides a better alternative for the projects that are compiled with TypeScript compiler or the ts-loader for Webpack eliminating the need for Babel.
+This provides a better alternative for the projects that are compiled with the TypeScript compiler or the ts-loader for Webpack, eliminating the need for Babel.
 
 Check usage instructions [here](/docs/tracing/function-level-tracing#typescript-transformer)
 
