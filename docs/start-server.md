@@ -1,7 +1,7 @@
 ---
 id: start-server
-title: Start a recap.dev server
-sidebar_label: Start a recap.dev server
+title: Start a Recap.Dev Server
+sidebar_label: Start a Recap.Dev Server
 slug: start-server
 ---
 
@@ -9,6 +9,8 @@ recap.dev server is available as a [docker image](https://hub.docker.com/reposit
 It's also available as an AMI so it's easier to start using recap.dev on AWS.
 
 ## Using a Docker Image
+
+Recap.Dev server is available as a [docker image at Docker Hub](https://hub.docker.com/repository/docker/recapdev/server).
 
 There are only two prerequisites to start a recap.dev docker image on your server:
 
