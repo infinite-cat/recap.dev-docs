@@ -33,6 +33,11 @@ module.exports = {
           position: 'right',
         },
         {
+          href: 'https://hub.docker.com/repository/docker/recapdev/server',
+          label: 'Docker Hub',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/infinite-cat/',
           label: 'GitHub',
           position: 'right',
@@ -79,6 +84,10 @@ module.exports = {
             {
               label: 'Contact Us',
               to: 'contact-us',
+            },
+            {
+              label: 'Docker Hub',
+              href: 'https://hub.docker.com/repository/docker/recapdev/server',
             },
             {
               label: 'GitHub',
