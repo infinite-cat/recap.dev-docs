@@ -58,9 +58,9 @@ Check out a complete example project [here](https://github.com/infinite-cat/verc
 ## Unit Name
 
 A unit is a minimal tracked component in recap.dev.
-By configuring unit names you can select a granularity of your data to your liking.
+By configuring unit names, you can select a granularity of your data to your liking.
 
-Unfortunately there's no default way of prodiving a per-endpoint name automatically for Vercel Functions currently.
+Unfortunately, there is currently no way of providing a per-endpoint name automatically for Vercel Functions.
 
 The strategy used in the example project is concatenating an environment name and the hardcoded handler URL path. 
 Which will give a unit name like this:
@@ -71,24 +71,10 @@ preview/api/hello
 
 Which will result in a unit being a handler in a specific environment.
 
-You can always modify the name of the unit in the current trace by calling `tracer.setUnitName` like this:
+You can always modify the name of the unit in the current trace by calling the `tracer.setUnitName` method like this:
 
 ```js
 import { tracer } from '@recap.dev/client'
 
 tracer.setUnitName('dev-get-cat-facts')
-```
-
-Or by providing a different strategy to the wrapper function:
-
-```js
-import { wrapVercelHandler } from '@recap.dev/client'
-import fetch from 'node-fetch'
-
-module.exports = wrapVercelHandler(async (req, res) => {
-  const response = await fetch('https://cat-fact.herokuapp.com/facts')
-  const json = await response.json()
-
-  res.status(200).send(json)
-}, process.env.VERCEL_ENV)
 ```

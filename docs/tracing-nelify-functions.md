@@ -57,7 +57,7 @@ Check out a complete example project [here](https://github.com/infinite-cat/netl
 ## Unit Name
 
 A unit is a minimal tracked component in recap.dev. 
-By configuring unit names you can select a granularity of your data to your liking.
+By configuring unit names, you can select a granularity of your data to your liking.
 
 The default unit name strategy for Netlify Functions is concatenating a site name and the handler URL path. For example:
 
@@ -77,7 +77,7 @@ tracer.setUnitName('dev-get-cat-facts')
 
 ## Setting up a Function-level Tracing
 
-Recap.dev currently supports function-level tracing of Netlify Functions with a babel plugin.
+Recap.dev currently supports function-level tracing of Netlify Functions with a Babel plugin.
 If you already have babel set up in your project please refer to the [generic Babel function-level setup guide](/docs/tracing/function-level-tracing#babel-plugin).
 
 Please follow this guide if you haven't configured Babel for your Netlify Functions project yet. 
