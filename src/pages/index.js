@@ -62,7 +62,7 @@ function Home() {
               </SupportedTechnologies>
 
               <ActionsRow>
-                <NoUnderlineLink href="/docs" target="_blank">
+                <NoUnderlineLink href="/docs">
                   <CallToActionButton variant="extended">Quick Start</CallToActionButton>
                 </NoUnderlineLink>
                 <NoUnderlineLink
