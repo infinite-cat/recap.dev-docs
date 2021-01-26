@@ -6,7 +6,7 @@ author_title: Lead Architect @ eMarketeer
 author_url: https://github.com/ArsenyYankovsky
 author_image_url: https://avatars0.githubusercontent.com/u/1508345?s=460&u=3f36532a8ad64bd1d110c00a4eb438600d60cb92&v=4
 image: /img/blog/2021-01-26-announcing-vercel-and-netlify-functions-tracing/hero.png
-tags: [recap.dev, vercel, vercel functions, netlify functions, netlify, serverless, jamstack, tracing, monitoring, integration, support]
+tags: [recap.dev, vercel, netlify, serverless, jamstack, tracing, monitoring, integration, support]
 ---
 
 We just released a new 1.12.0 version of the [recap.dev JavaScript client](https://www.npmjs.com/package/@recap.dev/client) which exports two new wrapper functions: `wrapNetlifyHandler` and `wrapVercelHandler`. 
