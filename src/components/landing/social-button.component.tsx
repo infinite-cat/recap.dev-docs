@@ -25,7 +25,7 @@ export interface SocialButtonProps {
 }
 
 export const SocialButton = ({ icon, url }: SocialButtonProps) => (
-  <a href={url} target="_blank" rel="noopener noreferrer">
+  <a href={url} target="_blank" rel="noopener noreferrer nofollow">
     <StyledFab>
       <Icon src={icon} />
     </StyledFab>

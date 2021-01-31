@@ -69,6 +69,7 @@ function Home() {
                   href="https://demo.recap.dev"
                   onClick={onViewDemoClick}
                   target="_blank"
+                  rel="nofollow noopener"
                 >
                   <CallToActionButton variant="extended">View Demo</CallToActionButton>
                 </NoUnderlineLink>
