@@ -5,7 +5,7 @@ author: Arseny Yankovski
 author_title: Lead Architect @ eMarketeer
 author_url: https://github.com/ArsenyYankovsky
 author_image_url: https://avatars0.githubusercontent.com/u/1508345?s=460&u=3f36532a8ad64bd1d110c00a4eb438600d60cb92&v=4
-image: /img/blog/2021-01-27-tracing-system-as-an-application-operations-log/hero.png
+image: /img/blog/2021-02-01-5-reasons-to-use-recap-dev/hero.png
 tags: [Recap.Dev, logging, debugging, devops, tracing, monitoring, alerts, observability]
 ---
 
