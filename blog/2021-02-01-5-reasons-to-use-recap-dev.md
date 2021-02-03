@@ -27,6 +27,8 @@ We're firm believers in the sane defaults.
 Of course, Recap.Dev won't message you every time you have an error in your system.
 It will report an error not more often than every 5 minutes and send the frequency of occurrences along.
 
+![An error alert from recap.dev](/img/blog/2021-02-01-5-reasons-to-use-recap-dev/slack-error.png "An error alert from recap.dev")
+
 ### It's Easy to Start Using Recap.Dev
 
 Every time we provide a wrapper for new technology, we try to use all of its features.
@@ -52,6 +54,9 @@ Many times when my Serverless Function timed out, I'd have to write a special in
 The timeline will show a silly mistake I made and how much execution time it costs. 
 Doing SQL queries in a loop instead of one batch query? Recap.Dev's timeline will show that.
 
+![Recap.Dev timeline example](/img/blog/2021-02-01-5-reasons-to-use-recap-dev/timeline.png "Recap.Dev timeline example")
+<p align="center">I should probably make these API calls fire in parallel.</p>
+
 ### A Searchable Log of Your System's Operations
 
 When all of your system's invocations are recorded, it's easy to find a particular one and understand what happened.
@@ -60,7 +65,12 @@ Customer Support needs to look up a result of a particular operation?
 We got you covered. 
 Read more on the topic [here](/blog/tracing-system-as-an-application-operations-log).
 
+![recap.dev allows searching on a log message](/img/blog/2021-02-01-5-reasons-to-use-recap-dev/searchable-log.png "recap.dev allows searching on a log message")
+<p align="center">It's easy to find a trace by a log message.</p>
+
 ### A Helicopter View of Your System
+
+![Recap.Dev makes it easy to understand the state of your system.](/img/blog/2021-02-01-5-reasons-to-use-recap-dev/system-status.png "Recap.Dev makes it easy to understand the state of your system.")
 
 As a cherry on the top of a cake, Recap.Dev will also aggregate stats to give you the general impression of a system load and health.
 It also provides helpful insights about your system, like one endpoint failing too often.
