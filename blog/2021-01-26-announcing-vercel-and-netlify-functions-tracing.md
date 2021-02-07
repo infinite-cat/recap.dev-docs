@@ -20,13 +20,21 @@ If you're using Vercel or Netlify functions,
 it's even more challenging because there are even fewer tools available.
 No tracing tool supports these serverless platforms out of the box.
 
-That's why we just released a new 1.12.0 version of the [Recap.Dev JavaScript client](https://www.npmjs.com/package/@recap.dev/client), which exports two new wrapper functions: `wrapNetlifyHandler` and `wrapVercelHandler`.w
+That's why we just released a new 1.12.0 version of the [Recap.Dev JavaScript client](https://www.npmjs.com/package/@recap.dev/client), which exports two new wrapper functions: `wrapNetlifyHandler` and `wrapVercelHandler`.
 This allows tracing the [Netlify Functions](https://www.netlify.com/products/functions/) and the [Vercel Functions](https://vercel.com/docs/serverless-functions/introduction) serverless providers, respectively.
 
 <!--truncate-->
 
 Existing solutions and integrations only allow for log analysis.
 Don't get me wrong, it's a great and non-intrusive technique, but sometimes seeing logs is just not enough. 
+
+### Better Observability
+
+Recap.Dev will collect and aggregate statistics across your functions to provide you an understanding of each function's state. 
+It will also aggregate system-wide stats to give you a sense of your system's load and health.
+
+Based on these stats, it will generate useful insights, so you immediately see the important stuff. 
+An example insight is when a function fails in more than 1% of all invocations.
 
 ### Easier Debugging
 
