@@ -66,7 +66,7 @@ module.exports = {
             },
             {
               label: 'Slack',
-              href: 'https://join.slack.com/t/recapdev/shared_invite/zt-i5tq580i-TVvjpHsu35qVVSfbUL1V3Q',
+              href: 'https://join.slack.com/t/recapdev/shared_invite/zt-maryws74-SWSA1QSbIFbgX8A1wJRoSQ',
             },
             {
               label: 'Twitter',

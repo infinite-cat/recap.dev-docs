@@ -147,7 +147,7 @@ function Home() {
             <SocialButtons>
               <SocialButton
                 icon="/slack.svg"
-                url="https://join.slack.com/t/recapdev/shared_invite/zt-i5tq580i-TVvjpHsu35qVVSfbUL1V3Q"
+                url="https://join.slack.com/t/recapdev/shared_invite/zt-maryws74-SWSA1QSbIFbgX8A1wJRoSQ"
               />
               <SocialButton icon="/discord.svg" url="https://discord.gg/qSZZ9HN" />
               <SocialButton icon="/twitter.svg" url="https://twitter.com/recap_dev" />
