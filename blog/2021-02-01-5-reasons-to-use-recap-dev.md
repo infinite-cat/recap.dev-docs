@@ -16,6 +16,8 @@ while providing a nice experience to our actual users - engineers of all sorts.
 
 Let me walk you through a couple of main benefits I found while using Recap.Dev. Yes, we're using it ourselves.
 
+<!--truncate-->
+
 ### You're the First One to Know When an Error Occurs
 
 Let's face it: you're going to have errors in production. 
