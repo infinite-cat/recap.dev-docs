@@ -202,4 +202,22 @@ export const Email = styled.div`
   font-weight: 500;
   font-size: 18px;
   margin-bottom: 150px;
+  color: white;
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+`
+
+export const SubscribeLink = styled.a`
+  margin-left: 8px;
+  border-bottom: 2px solid white;
+  cursor: pointer;
+  text-decoration: none !important;
+
+  svg {
+    margin-bottom: -2px;
+    width: 22px;
+    height: 22px;
+  }
 `

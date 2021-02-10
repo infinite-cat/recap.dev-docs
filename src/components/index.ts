@@ -1,2 +1,2 @@
 export * from './landing'
-export * from './layouts'
+export * from './saas-subscribe.component'

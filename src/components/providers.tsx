@@ -10,10 +10,10 @@ const theme = createMuiTheme({
   palette: {
     type: 'light',
     primary: { main: '#1D4E89' },
-    secondary: { main: '#4aad90' },
+    secondary: { main: '#1D4E89' },
     text: {
       primary: '#000000',
-      secondary: '#4aad90',
+      secondary: '#1D4E89',
     },
   },
   overrides: {

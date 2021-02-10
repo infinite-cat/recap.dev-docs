@@ -1,4 +1,5 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useRef } from 'react'
+import { ArrowDown } from 'react-feather'
 import Layout from '@theme/Layout'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 
@@ -6,7 +7,6 @@ import {
   ActionsRow,
   BlueBackgroundFeature,
   CallToActionButton,
-  CommunityHeader,
   Email,
   FeatureBlock,
   FeatureDescription,
@@ -23,17 +23,21 @@ import {
   ProjectName,
   SocialButton,
   SocialButtons,
+  SubscribeLink,
   Stars,
   TitleBlock,
   TitleBlockContent,
   WhiteBackgroundFeature,
   PaddedHeading,
   SupportedTechnologies,
-} from '../components/landing'
+  SaasSubscribe,
+} from '../components'
 import { Providers } from '../components/providers'
 
 function Home() {
   const { siteConfig } = useDocusaurusContext()
+  const subscribeRef = useRef(null)
+  const scrollToSubscribe = () => subscribeRef.current?.scrollIntoView({ behavior: 'smooth' })
 
   const onViewDemoClick = useCallback(() => {
     if (window.ga) {
@@ -87,6 +91,12 @@ function Home() {
                   </a>{' '}
                 </span>
                 or email us at <a href="mailto:contact@recap.dev">contact@recap.dev</a>
+              </PaddedHeading>
+              <PaddedHeading variant="h6">
+                Waiting for a SAAS version?
+                <SubscribeLink onClick={scrollToSubscribe}>
+                  Subscribe here <ArrowDown />
+                </SubscribeLink>
               </PaddedHeading>
             </TitleBlockContent>
           </TitleBlock>
@@ -142,8 +152,9 @@ function Home() {
               <FeatureIconOnBlue src="/dashboard.png" />
             </FeatureBlock>
           </BlueBackgroundFeature>
-          <WhiteBackgroundFeature>
-            <CommunityHeader>Join the community</CommunityHeader>
+          <SaasSubscribe ref={subscribeRef} />
+          <BlueBackgroundFeature>
+            <FeatureTitleWhite>Join the community</FeatureTitleWhite>
             <SocialButtons>
               <SocialButton
                 icon="/slack.svg"
@@ -157,7 +168,7 @@ function Home() {
               Have more questions? Contact us at{' '}
               <a href="mailto:contact@recap.dev">contact@recap.dev</a>
             </Email>
-          </WhiteBackgroundFeature>
+          </BlueBackgroundFeature>
         </Providers>
       </Layout>
     </div>
