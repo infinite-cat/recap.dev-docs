@@ -40,23 +40,17 @@ export const SaasSubscribe = forwardRef((props, ref: React.ForwardedRef<HTMLDivE
       }
 
       const url =
-        'https://forms.zohopublic.eu/arseny/form/RecapDevSaaSBetaSignup/formperma/EjwdP3dJRAdme62WfMnsBV7uqXCw5hk4y-_EmXqD_C4/htmlRecords/submit'
-
-      const formData = new FormData()
-      formData.append('Email', email)
+        'https://wk6d211hv0.execute-api.eu-west-1.amazonaws.com/dev/saas-request'
 
       const response = await fetch(url, {
         method: 'POST',
-        body: formData,
+        body: new URLSearchParams({ email }).toString(),
         headers: {
-          'Content-Type': 'multipart/form-data',
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
       })
-      const result = await response.text()
 
-      console.log(result)
-      console.log(formData.get('Email'))
-      return result
+      return response.status === 200
     },
     [email],
   )
