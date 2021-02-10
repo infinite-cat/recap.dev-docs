@@ -50,6 +50,10 @@ export const SaasSubscribe = forwardRef((props, ref: React.ForwardedRef<HTMLDivE
         },
       })
 
+      if (response.status === 200 && window.ga) {
+        window.ga('send', 'event', 'subscribe', 'newsletter', 'SAAS')
+      }
+
       return response.status === 200
     },
     [email],
