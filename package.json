@@ -9,6 +9,7 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
+    "tsc": "tsc",
     "format": "prettier --write ./src"
   },
   "dependencies": {
