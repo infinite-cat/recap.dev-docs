@@ -28,6 +28,8 @@ const SuccessMessage = styled.div`
 `
 
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+const SUBSCRIPTION_URL = 'https://wk6d211hv0.execute-api.eu-west-1.amazonaws.com/dev/saas-request'
+const anyWindow = window as any
 
 export const SaasSubscribe = forwardRef((props, ref: React.ForwardedRef<HTMLDivElement>) => {
   const [email, setEmail] = useState('')
@@ -39,10 +41,7 @@ export const SaasSubscribe = forwardRef((props, ref: React.ForwardedRef<HTMLDivE
         return Promise.reject(new Error('Invalid email address'))
       }
 
-      const url =
-        'https://wk6d211hv0.execute-api.eu-west-1.amazonaws.com/dev/saas-request'
-
-      const response = await fetch(url, {
+      const response = await fetch(SUBSCRIPTION_URL, {
         method: 'POST',
         body: new URLSearchParams({ email }).toString(),
         headers: {
@@ -50,8 +49,8 @@ export const SaasSubscribe = forwardRef((props, ref: React.ForwardedRef<HTMLDivE
         },
       })
 
-      if (response.status === 200 && window.ga) {
-        window.ga('send', 'event', 'subscribe', 'newsletter', 'SAAS')
+      if (response.status === 200 && anyWindow.ga) {
+        anyWindow.ga('send', 'event', 'subscribe', 'newsletter', 'SAAS')
       }
 
       return response.status === 200
