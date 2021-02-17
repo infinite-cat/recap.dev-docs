@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'recap.dev',
+  title: 'Recap.Dev',
   tagline: 'Open-source tracing for modern JavaScript backends',
   url: 'https://recap.dev',
   baseUrl: '/',
@@ -13,7 +13,7 @@ module.exports = {
       trackingID: 'UA-180958941-1',
     },
     navbar: {
-      title: 'recap.dev',
+      title: 'Recap.Dev',
       logo: {
         alt: 'recap.dev',
         src: 'img/logo.svg',
