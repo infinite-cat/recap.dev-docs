@@ -16,4 +16,4 @@ It means tracing your application with Recap.Dev requires no code changes at all
 Why would you do that? Here's [an article](/blog/5-reasons-to-use-recap.dev) giving you five good reasons. 
 Basically, it helps you understand your application and how much time various operations took while serving a particular request.
 
-[Click here to learn how to get started with recap.dev](/docs)
+[Click here to learn how to get started with Recap.Dev](/docs)
