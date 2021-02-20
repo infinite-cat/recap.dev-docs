@@ -12,6 +12,7 @@ Here's a list of currently supported technologies:
 - [Serverless](/docs/tracing/serverless-application). You can easily trace most of the serverless applications no matter what kind of technology it is made with.
 - [ExpressJS](/docs/tracing/express-application). That includes any technologies based on ExpressJS.
 - [NestJS](/docs/tracing/nestjs-application). NestJS is based on ExpressJS but recap.dev goes a step further and provides an even deeper integration for the NestJS-based applications.
+- [Sails.js](/docs/tracing/sailsjs-application). Sails.js is also based on ExpressJS but thanks to the Sails' hooks system it's much easier to set the tracing up.
 - [Netlify Functions](/docs/tracing/netlify-functions). Recap.dev provides a handler wrapper for Netlify Functions with a default unit name that results in a per-endpoint per-environment tracking. It is also possible to set up a function-level tracing for the Netlify Functions.
 - [Vercel Functions](/docs/tracing/vercel-serverless-functions). Recap.dev provides a handler wrapper for Vercel Serverless Functions with basic tracing. 
 

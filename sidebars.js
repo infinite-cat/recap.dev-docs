@@ -5,6 +5,7 @@ module.exports = {
       'tracing-serverless-application',
       'tracing-express-application',
       'tracing-nestjs-application',
+      'tracing-sailsjs-application',
       'tracing-netlify-functions',
       'tracing-vercel-functions',
       'function-level-tracing'
