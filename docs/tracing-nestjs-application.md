@@ -5,9 +5,9 @@ sidebar_label: NestJS Application
 slug: /tracing/nestjs-application
 ---
 
-Recap.dev provides two levels of tracing: **basic tracing** and **function-level** tracing
+Recap.dev provides two levels of tracing: **basic tracing** and **function-level** tracing.
 
-**Basic tracing** collects request, response and error information, logs and provides a timeline of external resource access (databases, http endpoints, external services) of your unit (basically, endpoint or handler).
+**Basic tracing** collects request, response and error information, logs, and provides a timeline of external resource access (databases, http endpoints, external services) of your unit (basically, endpoint or handler).
 
 **Function-level** tracing also adds timings of the individual function calls to the timeline.
 

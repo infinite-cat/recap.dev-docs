@@ -62,7 +62,7 @@ function Home() {
               </ProjectDescription>
 
               <SupportedTechnologies variant="h6">
-                Supports Express.js and Serverless. Contact us for more!
+                Supports both serverless and non-serverless technologies. Contact us if your favorite technology is not supported!
               </SupportedTechnologies>
 
               <ActionsRow>
