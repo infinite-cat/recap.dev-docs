@@ -1,6 +1,6 @@
 ---
 id: tracing-sailsjs-application
-title: Tracing Sails.js Application
+title: Tracing a Sails.js Application
 sidebar_label: Sails.js Application
 slug: /tracing/sailsjs-application
 ---

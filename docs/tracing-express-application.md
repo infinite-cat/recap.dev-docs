@@ -1,6 +1,6 @@
 ---
 id: tracing-express-application
-title: Tracing ExpressJS Application
+title: Tracing an ExpressJS Application
 sidebar_label: ExpressJS-based Application
 slug: /tracing/express-application
 ---
@@ -15,11 +15,15 @@ Recap.dev provides two levels of tracing: **basic tracing** and **function-level
 
 #### 1. Install recap.dev client library
 
-`yarn add @recap.dev/client`
+```shell
+yarn add @recap.dev/client
+```
 
 or
 
-`npm i --save @recap.dev/client`
+```shell
+npm i --save @recap.dev/client
+```
 
 
 #### 2. Wrap your express application with recap.dev tracing
