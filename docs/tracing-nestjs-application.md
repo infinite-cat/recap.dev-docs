@@ -1,54 +1,91 @@
 ---
 id: tracing-nestjs-application
-title: Tracing NestJS Application
+title: Tracing a NestJS Application
 sidebar_label: NestJS Application
 slug: /tracing/nestjs-application
 ---
 
-Recap.dev provides two levels of tracing: **basic tracing** and **function-level** tracing.
+Recap.Dev provides two levels of tracing: **basic tracing** and **function-level** tracing.
 
-**Basic tracing** collects request, response and error information, logs, and provides a timeline of external resource access (databases, http endpoints, external services) of your unit (basically, endpoint or handler).
+**Basic tracing** collects request, response and error information, logs, and provides a timeline of external resource access (databases, HTTP endpoints, external services) of your unit (basically, endpoint or handler).
 
 **Function-level** tracing also adds timings of the individual function calls to the timeline.
 
 ## Setting up a Basic Tracing
 
-Since NestJS uses Express setting up basic tracing with NestJS application is essentially setting up ExpressJS tracing.
-Click [here](/docs/tracing/express-application) to learn how to setup basic tracing with ExpressJS
+#### 1. Install the Recap.Dev Client Library
 
-Beyond that recap.dev provides additional integration for NestJS applications. 
-Wrapping your NestJS module with `wrapNestJsModule` function exported from the `@recap.dev/client` package will record calls and their timings of the controllers and injectables in the NestJS module.
+```shell
+yarn add @recap.dev/client
+```
 
-Wrapping your module like this:
+or
+
+```shell
+npm i --save @recap.dev/client
+```
+
+#### 2. Enable the NestJS Tracing
+
+Call the `initNestJsTracing` function before creating your NestJS app.
 
 ```js
+import { initNestJsTracing } from '@recap.dev/client';
 import { NestFactory } from '@nestjs/core';
-import { wrapNestJsModule } from '@recap.dev/client';
 
-const app = await NestFactory.create(wrapNestJsModule(AppModule));
+import { AppModule } from './app.module';
+
+initNestJsTracing();
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  await app.listen(3000);
+}
+
+bootstrap();
 ```
 
-Will add the following information to the timeline:
+You may also pass these options to the `initNestJsTracing` function:
 
-![A recap.dev timeline with NestJS module wrapped](/img/docs/tracing/nestjs/timeline.png "A recap.dev timeline with NestJS module wrapped")
+- **captureLogs** - Enables or disables capture of logs from global console object. Defaults to true.
+- **disableAutomaticUnitNames** - Disables default `environment-injectable.methodName` unit names. Defaults to false.
+- **ignoreUnnamedUnits** - Ignore traces without a unit name.
+  Useful if you want to ignore requests to static assets or only trace particular modules. Defaults to true.
+- **assignUnitName** - Defines a unit name for a trace. 
+  The default strategy creates a unit name using a first injectable method appearing in the chain and an environment.
+  An example of the unit name generated is `local-CatFactsResolver.catFacts`
 
-Doing so also allows automatic naming if your recap.dev units if you wish to split and track your application on a per-endpoint basis.
-One example is making the unit name a combination of an environment, controller name, and a controller method name.
-We can write a middleware to do that automatically.
+
+#### 3. Wrap NestJS Modules to Trace Them
+
+Wrap a NestJS module with `wrapNestJsModule` function exported from the `@recap.dev/client` to trace it with Recap.Dev.
+
 
 ```js
-app.use((req, res, next) => {
-  res.prependListener('finish', () => {
-    tracer.setUnitName(`${process.env.environment}-${tracer.getCurrentTrace()?.functionCallEvents[1]?.functionName}`);
-  });
+import { initNestJsTracing, wrapNestJsModule } from '@recap.dev/client';
+import { NestFactory } from '@nestjs/core';
 
-  next();
-});
+import { AppModule } from './app.module';
+
+initNestJsTracing();
+
+async function bootstrap() {
+const app = await NestFactory.create(wrapNestJsModule(AppModule));
+
+await app.listen(3000);
+}
+
+bootstrap();
 ```
 
-This will result in a unit name like this: `local-AppController.getHello`
+#### 4. Set the `RECAP_DEV_SYNC_ENDPOINT` environment variable to point at your Recap.Dev server's sync endpoint, for example:
 
-Check the complete source code of an example NestJS project traced with recap.dev [here](https://github.com/infinite-cat/recap.dev-example-nestjs-project)
+```
+http://recap-dev.company.com:8080/traces
+```
+
+Check the complete source code of an example NestJS project traced with Recap.Dev [here](https://github.com/infinite-cat/recap.dev-example-nestjs-project).
 
 ## Setting up a Function-level Tracing
 

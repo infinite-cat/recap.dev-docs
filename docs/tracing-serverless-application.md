@@ -1,6 +1,6 @@
 ---
 id: tracing-serverless-application
-title: Tracing Serverless Application
+title: Tracing a Serverless Application
 sidebar_label: Serverless Application
 slug: /tracing/serverless-application
 ---
