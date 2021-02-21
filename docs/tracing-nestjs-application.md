@@ -71,9 +71,9 @@ import { AppModule } from './app.module';
 initNestJsTracing();
 
 async function bootstrap() {
-const app = await NestFactory.create(wrapNestJsModule(AppModule));
+  const app = await NestFactory.create(wrapNestJsModule(AppModule));
 
-await app.listen(3000);
+  await app.listen(3000);
 }
 
 bootstrap();
